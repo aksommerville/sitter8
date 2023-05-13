@@ -1,6 +1,5 @@
 function draw_world()
-  map(0,0,0,16,16,12)
-  
+  map(0,0,0,16,16,12)  
   for sprite in all(sprites) do
     if (sprite.draw) then
       sprite.draw(sprite)
@@ -16,23 +15,32 @@ function draw_world()
   end
 end
 
-function reprtime(f,s,m)
-  if (s<10) s="0"..s
-  if (m<10) m="0"..m
-  return m..":"..s
-end
-
 function draw_gameover()
   rectfill(0,16,128,112,1)
-  --todo
+  print("game over",47,50,7)
+  print("thanks for playing!",24,66,6)
+  print("press jump to play again",16,72,6)
 end
 
 function draw_levelwrap()
   if (deadbaby) then
     rectfill(0,16,128,112,8)
+    print("failure!",50,60,7)
   else
     rectfill(0,16,128,112,3)
+    print("success!",50,35,7)
+    print("level time: "..reprtime(lt_f,lt_s,lt_m),29,58,6)
+    print("    record: "..reprtime(lr_f,lr_s,lr_m),29,64,6)
+    print("total so far: "..reprtime(tt_f,tt_s,tt_m),21,74,6)
+    print("      record: "..reprtime(tr_f,tr_s,tr_m),21,80,6)
+    print("losses: "..losscount,45,90,6)
   end
+end
+
+function reprtime(f,s,m)
+  if (s<10) s="0"..s
+  if (m<10) m="0"..m
+  return m..":"..s
 end
 
 function draw_chrome()
@@ -42,6 +50,5 @@ function draw_chrome()
   print("t: "..reprtime(tt_f,tt_s,tt_m),0,119,4)
   print(reprtime(lr_f,lr_s,lr_m),64,113,9)
   print(reprtime(tr_f,tr_s,tr_m),64,119,9)
-  print("level "..mapid,0,5,4)
-  --print("another thing",0,11,4)
+  print("level "..mapid,0,11,4)
 end

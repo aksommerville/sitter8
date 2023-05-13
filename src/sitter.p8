@@ -11,39 +11,6 @@ __lua__
 #include sprite.lua
 #include rules.lua
 #include draw.lua
-
-function _init()
-  cartdata("sitter_hi_scores")
-  reinit()
-end
-
-function _update()
-  if (gameover) then
-    if (btnp(4)) then
-      reinit()
-    end
-  elseif (levelwrap) then
-    if (btnp(4)) then
-      levelwrap=false
-      if (deadbaby) mapid-=1
-      next_map()
-    end
-  else
-    world_update()
-  end
-end
-
-function _draw()
-  if (gameover) then
-    draw_gameover()
-  elseif (levelwrap) then
-    draw_levelwrap()
-  else
-    draw_world()
-  end
-  draw_chrome()
-end
-
 __gfx__
 cccccccc3333333333333333cccccccc888888867755775500000000000000000000000000000000000000000000000000000000000000000000000000000000
 cc8c8ccc3333333333333333cccccccc888888867755775500000000000000000000000000000000000000000000000000000000000000000000000000000000

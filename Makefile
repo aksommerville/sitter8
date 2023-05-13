@@ -21,3 +21,4 @@ edit:;$(PICO8_EXE) src/sitter.p8
 pkg:$(OUT_CART)
 run-cart:$(OUT_CART);$(PICO8_EXE) -run $(OUT_CART)
 clean:;rm -rf mid out
+zap-scores:;rm $(PICO8_HOME)/cdata/sitter_hi_scores.p8d.txt

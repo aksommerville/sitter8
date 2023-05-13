@@ -11,8 +11,8 @@ Using as a test case for learning Pico-8.
 
 ## TODO
 
-- [ ] Level wrap-up splash
-- [ ] Game end splash
+- [x] Level wrap-up splash
+- [x] Game end splash
 - [ ] Sound effects
 - [ ] Music
 - [ ] Susie
