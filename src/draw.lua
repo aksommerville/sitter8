@@ -17,7 +17,8 @@ end
 
 function draw_gameover()
   rectfill(0,16,128,112,1)
-  print("game over",47,50,7)
+  print("game over",47,30,7)
+  print(reprtime(tt_f,tt_s,tt_m)..", "..losscount.." losses",35,40)
   print("thanks for playing!",24,66,6)
   print("press jump to play again",16,72,6)
 end
