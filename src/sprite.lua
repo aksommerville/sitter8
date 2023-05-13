@@ -82,3 +82,31 @@ function fire_update(sprite)
     end
   end
 end
+
+function susie_update(sprite)
+  sprite_update(sprite)
+  sprite.animclock+=1
+  if (sprite.animclock>6) then
+    sprite.animclock=0
+    sprite.animframe+=1
+    if (sprite.animframe>=4) sprite.animframe=0
+    if (sprite.animframe==0) then
+      sprite.tileid=0x24
+    elseif (sprite.animframe==1) then
+      sprite.tileid=0x25
+    elseif (sprite.animframe==2) then
+      sprite.tileid=0x24
+    elseif (sprite.animframe==3) then
+      sprite.tileid=0x26
+    end
+  end
+  local walkok=false
+  if (sprite.faceright) then
+    walkok=sprite_move(sprite,1,0)
+  else
+    walkok=sprite_move(sprite,-1,0)
+  end
+  if (not walkok) then
+    sprite.faceright=not sprite.faceright
+  end
+end

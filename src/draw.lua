@@ -8,7 +8,7 @@ function draw_world()
         sprite.tileid,
         sprite.x,
         sprite.y+16,
-        1,1,false,
+        1,1,sprite.faceright,
         sprite.carried
       )
     end

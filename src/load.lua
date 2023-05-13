@@ -42,6 +42,20 @@ function mkdesmond(col,row)
   return sprite
 end
 
+function mksusie(col,row)
+  local sprite=mksprite(col,row)
+  sprite.tileid=0x24
+  sprite.pickup=true
+  sprite.solid=true
+  sprite.human=true
+  sprite.fragile=true
+  sprite.update=susie_update
+  sprite.faceright=false
+  sprite.animclock=0
+  sprite.animframe=0
+  return sprite
+end
+
 function mktomato(col,row)
   local sprite=mksprite(col,row)
   sprite.tileid=0x20
@@ -92,6 +106,9 @@ function load_sprites()
         mset(x,y,3)
       elseif (v==0x22) then
         add(sprites,mkfire(x,y))
+        mset(x,y,3)
+      elseif (v==0x24) then
+        add(sprites,mksusie(x,y))
         mset(x,y,3)
       end
     end

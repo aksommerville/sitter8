@@ -17,8 +17,8 @@ Using as a test case for learning Pico-8.
 - [x] Game end splash
 - [x] Sound effects
 - [x] Music
-- [ ] Susie
-- [ ] More children?
+- [x] Susie
+- [x] More children? ...nah
 - [ ] More hazards? Just fire for now.
 - [ ] Gimmicks? Balloon, conveyor belt, moving platforms...
 - [ ] 39 levels
