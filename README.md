@@ -1,6 +1,9 @@
 # Sitter for Pico-8
 
-This is a game I've made [https://github.com/aksommerville/lilsitter](several) [https://github.com/aksommerville/sitter2009](times) [https://github.com/aksommerville/sitter](before).
+This is a game I've made
+  [several](https://github.com/aksommerville/lilsitter)
+  [times](https://github.com/aksommerville/sitter2009)
+  [before](https://github.com/aksommerville/sitter).
 
 It's a fun concept, carry children to the goal and don't let them get killed.
 
