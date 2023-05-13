@@ -19,9 +19,9 @@ Using as a test case for learning Pico-8.
 - [x] Music
 - [x] Susie
 - [x] More children? ...nah
-- [ ] More hazards? Just fire for now.
-- [ ] Gimmicks? Balloon, conveyor belt, moving platforms...
-- [ ] 39 levels
+- [x] More hazards? Just fire for now. ...nah
+- [x] Gimmicks? Balloon, conveyor belt, moving platforms... nah
+- [x] 39 levels ...let's settle for 11
 - [x] Build process: Arrange to use an external text editor, I don't like working text within the Pico.
 - [x] Script export of final products.
 - [ ] Make a page on Itch?

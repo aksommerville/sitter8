@@ -54,6 +54,7 @@ function explode(sprite)
   e.clock=0
   e.draw=explode_draw
   e.update=explode_update
+  if (sprite.onkill) sprite.onkill(sprite)
 end
 
 function fire_update(sprite)

@@ -115,9 +115,12 @@ function hero_pickup_or_toss(sprite)
         4,sprite.h
       )
     end
-    --todo ensure head room exists
-    --todo if picking up from below, trade places vertically
     if (pumpkin) then
+      if (map_flag_in_rect(
+        sprite.x,sprite.y-pumpkin.h,sprite.w,pumpkin.h,0
+      )) then
+        return
+      end
       sfx(2)
       sprite.armsup=true
       sprite.pumpkin=pumpkin
@@ -265,5 +268,11 @@ function hero_draw(sprite)
       1,1,
       sprite.faceright
     )
+  end
+end
+
+function hero_kill(sprite)
+  if (sprite.pumpkin) then
+    toss_all(sprite,sprite.pumpkin,0)
   end
 end

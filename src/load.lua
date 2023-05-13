@@ -19,6 +19,7 @@ function mkhero(col,row)
   sprite.tileid=0x10
   sprite.draw=hero_draw
   sprite.update=hero_update
+  sprite.onkill=hero_kill
   sprite.y-=6
   sprite.h+=6
   sprite.faceright=false
@@ -59,6 +60,24 @@ end
 function mktomato(col,row)
   local sprite=mksprite(col,row)
   sprite.tileid=0x20
+  sprite.pickup=true
+  sprite.solid=true
+  sprite.fragile=true
+  return sprite
+end
+
+function mkorange(col,row)
+  local sprite=mksprite(col,row)
+  sprite.tileid=0x27
+  sprite.pickup=true
+  sprite.solid=true
+  sprite.fragile=true
+  return sprite
+end
+
+function mkturnip(col,row)
+  local sprite=mksprite(col,row)
+  sprite.tileid=0x28
   sprite.pickup=true
   sprite.solid=true
   sprite.fragile=true
@@ -109,6 +128,12 @@ function load_sprites()
         mset(x,y,3)
       elseif (v==0x24) then
         add(sprites,mksusie(x,y))
+        mset(x,y,3)
+      elseif (v==0x27) then
+        add(sprites,mkorange(x,y))
+        mset(x,y,3)
+      elseif (v==0x28) then
+        add(sprites,mkturnip(x,y))
         mset(x,y,3)
       end
     end
