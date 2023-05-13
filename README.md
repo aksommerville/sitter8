@@ -11,6 +11,8 @@ Using as a test case for learning Pico-8.
 
 ## TODO
 
+- [ ] Level wrap-up splash
+- [ ] Game end splash
 - [ ] Sound effects
 - [ ] Music
 - [ ] Susie
@@ -18,6 +20,6 @@ Using as a test case for learning Pico-8.
 - [ ] More hazards? Just fire for now.
 - [ ] Gimmicks? Balloon, conveyor belt, moving platforms...
 - [ ] 39 levels
-- [ ] Build process: Arrange to use an external text editor, I don't like working text within the Pico.
+- [x] Build process: Arrange to use an external text editor, I don't like working text within the Pico.
 - [ ] Script export of final products.
 - [ ] Make a page on Itch?
