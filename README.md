@@ -23,4 +23,4 @@ Using as a test case for learning Pico-8.
 - [x] Build process: Arrange to use an external text editor, I don't like working text within the Pico.
 - [ ] Script export of final products.
 - [ ] Make a page on Itch?
-- [ ] Is it possible to build the web runner, commit that to the repo, and have it launchable from Github?
+- [ ] Is it possible to build the web runner, commit that to the repo, and have it launchable from Github? ...maybe?
