@@ -122,6 +122,8 @@ function next_map()
     clocks_write_total_if()
     gameover=true
     mapid=0
+  else
+    music(0)
   end
 end
 

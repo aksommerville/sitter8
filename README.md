@@ -13,8 +13,8 @@ Using as a test case for learning Pico-8.
 
 - [x] Level wrap-up splash
 - [x] Game end splash
-- [ ] Sound effects
-- [ ] Music
+- [x] Sound effects
+- [x] Music
 - [ ] Susie
 - [ ] More children?
 - [ ] More hazards? Just fire for now.

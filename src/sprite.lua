@@ -46,6 +46,7 @@ function explode_update(sprite)
 end
 
 function explode(sprite)
+  sfx(6)
   local e=mksprite(0,0)
   add(sprites,e)
   e.x=sprite.x+sprite.w/2

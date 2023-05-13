@@ -41,6 +41,8 @@ function check_victory()
     levelwrap=true
     deadbaby=true
     losscount+=1
+    music(2)
+    sfx(4)
     return
   end
   if (all_sprites_victorious()) then
@@ -48,8 +50,12 @@ function check_victory()
     if (victorytime>=20) then
       if (deadbaby) then
         losscount+=1
+        sfx(4)
+      else
+        sfx(5)
       end
       levelwrap=true
+      music(2)
     end
   else
     victorytime=0

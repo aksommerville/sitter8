@@ -46,9 +46,11 @@ end
 function draw_chrome()
   rectfill(0,0,128,16,0)
   rectfill(0,112,128,128,0)
-  print("l: "..reprtime(lt_f,lt_s,lt_m),0,113,4)
+  if (mapid>0) then
+    print("l: "..reprtime(lt_f,lt_s,lt_m),0,113,4)
+    print(reprtime(lr_f,lr_s,lr_m),64,113,9)
+  end
   print("t: "..reprtime(tt_f,tt_s,tt_m),0,119,4)
-  print(reprtime(lr_f,lr_s,lr_m),64,113,9)
   print(reprtime(tr_f,tr_s,tr_m),64,119,9)
   print("level "..mapid,0,11,4)
 end

@@ -1,5 +1,3 @@
-
-
 function hero_jump_down(sprite)
   if (
     oneway_in_rect(
@@ -12,6 +10,7 @@ function hero_jump_down(sprite)
   ) then
     sprite.y+=1
     hjvp=#hjvv
+    sfx(1)
   end
 end
 
@@ -68,6 +67,7 @@ end
 function hero_pickup_or_toss(sprite)
   if (sprite.armsup) then
     sprite.armsup=false
+    sfx(3)
     if (sprite.facey<0) then
       toss_up(sprite,sprite.pumpkin)
     elseif (sprite.facey>0) then
@@ -118,6 +118,7 @@ function hero_pickup_or_toss(sprite)
     --todo ensure head room exists
     --todo if picking up from below, trade places vertically
     if (pumpkin) then
+      sfx(2)
       sprite.armsup=true
       sprite.pumpkin=pumpkin
       pumpkin.carried=true
@@ -182,6 +183,9 @@ function hero_update(sprite)
     hero_jump_down(sprite)
   end
   if (btn(4) and (hjvp<#hjvv)) then
+    if (hjvp==1) then
+      sfx(0)
+    end
     sprite_move(sprite,0,-hjvv[hjvp])
     hjvp+=1
   else
